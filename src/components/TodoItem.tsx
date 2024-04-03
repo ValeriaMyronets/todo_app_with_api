@@ -55,7 +55,7 @@ export const TodoItem: React.FC<Props> = ({ todo, isLoading }) => {
         setEditMode(true);
       }}
     >
-      <label className="todo__status-label">
+      <div className="todo__status-label">
         <input
           data-cy="TodoStatus"
           type="checkbox"
@@ -63,7 +63,7 @@ export const TodoItem: React.FC<Props> = ({ todo, isLoading }) => {
           checked={completed}
           onChange={() => handleUpdateTodo(!completed)}
         />
-      </label>
+      </div>
 
       {!editMode ? (
         <>
